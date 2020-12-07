@@ -2,7 +2,13 @@
 
 ## Usage
 
-Build and deploy the hello service and its docker container:
+Either build and deploy the parts individually, or run the `build-deploy-all.sh` script.
+
+**Note**
+
+The docker build references `buildx` because it is building an image that is suitable for Raspberry Pi. Read more about using `docker buildx` [here](https://docs.docker.com/buildx/working-with-buildx/).
+
+### Build and deploy the hello service and its docker container
 
 1. Go into `deploy-hello-service` 
 2. Run `./build-docker.sh`
@@ -10,7 +16,7 @@ Build and deploy the hello service and its docker container:
 
 The hello service will be accessible on any node in the cluster via port 32123 because we used the NodePort service type.
 
-Build and deploy the load test JMeter docker container and instances:
+### Build and deploy the load test JMeter docker container and instances
 
 1. Go into `deploy-jmeter`
 2. Run `./build-docker.sh`
